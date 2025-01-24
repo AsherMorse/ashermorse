@@ -54,7 +54,7 @@ const books = [
     category: "Science Fiction",
     description: "Humanity has colonized the solar system, but when Jim Holden stumbles upon a derelict ship, he finds himself in the middle of a conspiracy that threatens the entire system.",
     wantToRead: false,
-    rating: 4.5
+    rating: 3.5
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ const books = [
     category: "Fantasy",
     description: "The first book of The Wheel of Time series. When their village is attacked by terrifying creatures, three young men begin a perilous journey that will change their lives forever.",
     wantToRead: false,
-    rating: 4.5
+    rating: 3
   },
   {
     id: 6,
