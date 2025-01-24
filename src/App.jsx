@@ -363,7 +363,7 @@ function ReadingList() {
         {/* Books Container */}
         <div 
           id="books-container"
-          className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
+          className="flex gap-6 overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth"
           style={{ 
             scrollbarWidth: 'none', 
             msOverflowStyle: 'none',
