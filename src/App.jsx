@@ -14,6 +14,7 @@ import eyeOfTheWorldImg from './assets/eye-of-the-world.jpg'
 import redRisingImg from './assets/red-rising.jpg'
 import tauZeroImg from './assets/tau-zero.jpg'
 
+
 // Book data
 const books = [
   {
