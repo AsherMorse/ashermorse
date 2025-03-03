@@ -353,7 +353,7 @@ function ReadingList() {
 
   return (
     <Section id="reading">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">Reading Journey</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8">Reading Favorites</h2>
       
       <div className="relative">
         {/* Scroll Indicators */}
