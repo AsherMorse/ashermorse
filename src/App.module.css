@@ -1,0 +1,162 @@
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif;
+
+  --light-bg: linear-gradient(145deg, #f0f4f8 0%, #f8fafc 100%);
+  --light-card-bg: rgba(255,255,255,0.8);
+  --light-text: #333333;
+  --light-text-secondary: #555555;
+  --light-divider: rgba(0,0,0,0.1);
+  --light-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  --light-name-gradient: linear-gradient(90deg, #333 0%, #555 100%);
+
+  --dark-bg: linear-gradient(145deg, #1a1b1e 0%, #1e2124 100%);
+  --dark-card-bg: rgba(32,33,36,0.8);
+  --dark-text: #e1e1e1;
+  --dark-text-secondary: #e1e1e1;
+  --dark-divider: rgba(255,255,255,0.1);
+  --dark-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  --dark-name-gradient: linear-gradient(90deg, #fff 0%, #e1e1e1 100%);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  max-width: 520px;
+  width: 100%;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 30px 40px;
+}
+
+.name {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: var(--name-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.jobTitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+
+.bioSection {
+  margin-bottom: 32px;
+}
+
+.bioText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  opacity: 0.85;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+  margin: 24px 0;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.experienceEntry {
+  margin-bottom: 16px;
+}
+.experienceEntry:last-child {
+  margin-bottom: 0;
+}
+.experienceTitle {
+  font-weight: 500;
+}
+.experienceCompany {
+  opacity: 0.7;
+}
+.experienceDetails {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.educationEntry {
+  margin-bottom: 12px;
+}
+.educationEntry:last-child {
+  margin-bottom: 0;
+}
+.educationSchool {
+  font-weight: 500;
+}
+.educationDegree {
+  opacity: 0.7;
+}
+.educationPeriod {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.skillsText,
+.certificationsText {
+  opacity: 0.8;
+}
+
+.socialsSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 0;
+}
+
+.socialLink {
+  color: var(--text);
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.socialLink:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+} 
