@@ -1,0 +1,29 @@
+# Asher Morse - Portfolio
+
+> Asher Morse is a software developer who values clean, consistent code and collaborative teamwork. Specialized in Swift, Collaborative Problem Solving, Amazon Web Services (AWS), and Artificial Intelligence (AI).
+
+I am an efficient and people-oriented software developer driven by a passion for learning. I strive to deliver high-quality solutions while continuously expanding my skills and helping others grow.
+
+## Experience
+
+- [Software Engineer @ Trilogy](https://www.ashermorse.org/#experience): Mar 2025 - Present, Austin, TX (Hybrid)
+- [Software Developer @ Gauntlet AI](https://www.ashermorse.org/#experience): Jan 2025 - Mar 2025, Austin, TX (On-site)
+
+## Education
+
+- [Self-taught - Computer Software Engineering](https://www.ashermorse.org/#education)
+- [Lake Washington Institute of Technology - Running Start](https://www.ashermorse.org/#education): Sep 2023 - Jun 2024
+
+## Skills
+
+- [Swift, Collaborative Problem Solving, AWS, Python, AI](https://www.ashermorse.org/#skills)
+
+## Certifications
+
+- [AI for Developer Productivity — Gauntlet AI](https://www.ashermorse.org/#certifications): Issued Mar 2025
+
+## Contact
+
+- [LinkedIn Profile](https://www.linkedin.com/in/ashermorse)
+- [GitHub Profile](https://github.com/ashermorse)
+- [Email Contact](mailto:contact@ashermorse.org)

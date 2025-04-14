@@ -25,7 +25,7 @@ const socials = [
   },
   {
     name: 'Email',
-    url: 'mailto:asher@ashermorse.org',
+    url: 'mailto:contact@ashermorse.org',
     icon: (
       <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.7l-8 5.3-8-5.3V6l8 5.3L20 6v2.7z"/>
@@ -107,6 +107,7 @@ const styles = {
     background: colors.nameGradient,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
+    display: 'block',
   }),
   title: (colors) => ({
     fontSize: 20,
@@ -133,48 +134,72 @@ const styles = {
     color: colors.text,
     opacity: 0.6,
     transition: 'opacity 0.2s, transform 0.2s',
-    ':hover': {
-      opacity: 0.9,
-      transform: 'translateY(-2px)',
-    },
+    cursor: 'pointer',
   }),
+  socialLinkHovered: {
+    opacity: 0.9,
+    transform: 'translateY(-2px)',
+  },
 };
 
-function useAutoTheme() {
-  React.useEffect(() => {
-    const setTheme = () => {
-      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.body.style.background = theme(isDark).colors.bg;
-      document.body.style.color = theme(isDark).colors.text;
-      document.body.style.margin = '0';
-      document.body.style.overflow = 'hidden';
-    };
-    setTheme();
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setTheme);
-    return () => {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', setTheme);
-    };
-  }, []);
-}
-
-const Section = ({ title, children }) => {
-  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const colors = theme(isDark).colors;
-  
+const Section = ({ title, children, colors }) => {
   return (
     <>
       <div style={styles.divider(colors)} />
       <section style={{ marginBottom: 24 }}>
-        <h3 style={styles.sectionTitle(colors)}>{title}</h3>
+        <h2 style={styles.sectionTitle(colors)}>{title}</h2>
         {children}
       </section>
     </>
   );
 };
 
+const SocialLink = ({ url, icon, name, colors }) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+  
+  return (
+    <a 
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={name}
+      style={{
+        ...styles.socialLink(colors),
+        ...(isHovered ? styles.socialLinkHovered : {})
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {icon}
+    </a>
+  );
+};
+
 export default function App() {
-  useAutoTheme();
-  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [isDark, setIsDark] = React.useState(
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
+  
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    const handleChange = (e) => {
+      setIsDark(e.matches);
+      document.body.style.background = theme(e.matches).colors.bg;
+      document.body.style.color = theme(e.matches).colors.text;
+      document.body.style.margin = '0';
+      document.body.style.overflow = 'hidden';
+    };
+    
+    handleChange(mediaQuery);
+    
+    mediaQuery.addEventListener('change', handleChange);
+    
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
+  
   const colors = theme(isDark).colors;
   
   return (
@@ -189,7 +214,7 @@ export default function App() {
           </p>
         </section>
 
-        <Section title="Experience">
+        <Section title="Experience" colors={colors}>
           {content.experience.map((job, i) => (
             <div key={job.company} style={{ marginBottom: i === content.experience.length - 1 ? 0 : 16 }}>
               <div style={{ fontWeight: 500 }}>{job.title} <span style={{ opacity: 0.7 }}>@ {job.company}</span></div>
@@ -198,7 +223,7 @@ export default function App() {
           ))}
         </Section>
 
-        <Section title="Education">
+        <Section title="Education" colors={colors}>
           {content.education.map((edu, i) => (
             <div key={edu.school} style={{ marginBottom: i === content.education.length - 1 ? 0 : 12 }}>
               <div style={{ fontWeight: 500 }}>{edu.school} <span style={{ opacity: 0.7 }}>— {edu.degree}</span></div>
@@ -207,27 +232,24 @@ export default function App() {
           ))}
         </Section>
 
-        <Section title="Skills">
+        <Section title="Skills" colors={colors}>
           <div style={{ opacity: 0.8 }}>{content.skills.join(', ')}</div>
         </Section>
 
-        <Section title="Certifications">
+        <Section title="Certifications" colors={colors}>
           <div style={{ opacity: 0.8 }}>{content.certifications}</div>
         </Section>
 
         <div style={styles.divider(colors)} />
         <section style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: 24, marginBottom: 0 }}>
           {socials.map(s => (
-            <a 
+            <SocialLink
               key={s.name}
-              href={s.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={s.name}
-              style={styles.socialLink(colors)}
-            >
-              {s.icon}
-            </a>
+              url={s.url}
+              icon={s.icon}
+              name={s.name}
+              colors={colors}
+            />
           ))}
         </section>
       </main>
