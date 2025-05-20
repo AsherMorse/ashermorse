@@ -1,9 +1,7 @@
 import React from 'react';
 
 export const contentData = {
-  bio: `
-I am an efficient and people-oriented software developer who values clean, consistent code and collaborative teamwork. Driven by a passion for learning, I strive to deliver high-quality solutions while continuously expanding my skills and helping others grow.
-`,
+  bio: `I am an efficient and people-oriented software developer who values clean, consistent code and collaborative teamwork.`,
   socials: [
     {
       name: 'LinkedIn',
@@ -25,7 +23,7 @@ I am an efficient and people-oriented software developer who values clean, consi
     },
     {
       name: 'Email',
-      url: 'mailto:contact@ashermorse.org',
+      url: 'mailto:contact@ashermorse.dev',
       icon: (
         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.7l-8 5.3-8-5.3V6l8 5.3L20 6v2.7z"/>
@@ -58,6 +56,6 @@ I am an efficient and people-oriented software developer who values clean, consi
       period: 'Sep 2023 - Jun 2024',
     },
   ],
-  skills: ['Swift', 'Collaborative Problem Solving', 'Amazon Web Services (AWS)', 'Python', 'Artificial Intelligence (AI)'],
+  skills: ['JavaScript', 'TypeScript', 'Python', 'Swift', 'React.js', 'Express.js', 'PostgreSQL', 'AWS', 'MCP'],
   certifications: ['AI for Developer Productivity — Gauntlet AI (Issued Mar 2025)'],
 }; 
