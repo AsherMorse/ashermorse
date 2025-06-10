@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-webtui-theme="gruvbox-dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asher Morse - Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav box-="square" shear-="bottom">
+        <row align-="between" space-="px:1">
+            <span is-="badge" variant-="background0">ashermorse.dev</span>
+            <row gap-="1">
+                <button size-="small" data-section="hero" class="nav-btn active">home</button>
+                <button size-="small" data-section="about" class="nav-btn">about</button>
+                <button size-="small" data-section="experience" class="nav-btn">experience</button>
+                <button size-="small" data-section="skills" class="nav-btn">skills</button>
+                <button size-="small" data-section="contact" class="nav-btn">contact</button>
+            </row>
+        </row>
+    </nav>
+
+    <main>
+        <section id="hero" class="section active">
+            <column align-="center" gap-="1" space-="py:2">
+                <pre class="ascii-art">
+    ___        __                   __  ___                    
+   /   | _____/ /_  ___  _____     /  |/  /___  _____________ 
+  / /| |/ ___/ __ \/ _ \/ ___/    / /|_/ / __ \/ ___/ ___/ _ \
+ / ___ (__  ) / / /  __/ /       / /  / / /_/ / /  (__  )  __/
+/_/  |_/___/_/ /_/\___/_/       /_/  /_/\____/_/  /____/\___/
+                </pre>
+                <h1>Software Developer</h1>
+                <column box-="square" space-="px:2 py:1" variant-="background0" class="bio-box">
+                    <p>I am an efficient and people-oriented software developer who values clean, consistent code and collaborative teamwork.</p>
+                </column>
+                <row gap-="1" class="hero-actions">
+                    <button onclick="showSection('experience')">View Experience</button>
+                </row>
+            </column>
+        </section>
+
+        <section id="about" class="section">
+            <column gap-="1" space-="px:2 py:1">
+                <h2>About Me</h2>
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">Info</span>
+                    </row>
+                    <column space-="px:1 pb:1" is-="typography-block">
+                        <p>I'm Asher Morse, a software developer based in Seattle, WA. I specialize in building efficient, clean solutions.</p>
+                        <p>My approach to development emphasizes:</p>
+                        <ul>
+                            <li>Clean, maintainable code architecture</li>
+                            <li>Collaborative teamwork and communication</li>
+                            <li>Continuous learning and improvement</li>
+                            <li>User-focused problem solving</li>
+                        </ul>
+                    </column>
+                </column>
+            </column>
+        </section>
+
+        <section id="experience" class="section">
+            <column gap-="1" space-="px:2 py:1">
+                <h2>Experience</h2>
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row align-="between">
+                        <span is-="badge" variant-="yellow">Software Engineer @ Trilogy</span>
+                        <span is-="badge" variant-="background0">Mar 2025 - Present</span>
+                    </row>
+                    <column space-="px:1 pb:1">
+                        <p>Austin, TX (Hybrid)</p>
+                    </column>
+                </column>
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row align-="between">
+                        <span is-="badge" variant-="blue">Software Developer @ Gauntlet AI</span>
+                        <span is-="badge" variant-="background0">Jan 2025 - Mar 2025</span>
+                    </row>
+                    <column space-="px:1 pb:1">
+                        <p>Austin, TX (On-site)</p>
+                    </column>
+                </column>
+
+                <h2>Education</h2>
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="yellow">Self-taught</span>
+                    </row>
+                    <column space-="px:1 pb:1">
+                        <p>Computer Software Engineering</p>
+                    </column>
+                </column>
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row align-="between">
+                        <span is-="badge" variant-="blue">Gauntlet AI</span>
+                        <span is-="badge" variant-="background0">Jan 2025 - Mar 2025</span>
+                    </row>
+                    <column space-="px:1 pb:1">
+                        <p>Austin, TX</p>
+                    </column>
+                </column>
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row align-="between">
+                        <span is-="badge" variant-="green">Lake Washington Institute of Technology</span>
+                        <span is-="badge" variant-="background0">Sep 2023 - Jun 2024</span>
+                    </row>
+                    <column space-="px:1 pb:1">
+                        <p>Running Start • GPA: 3.9</p>
+                    </column>
+                </column>
+
+                <h2>Certifications</h2>
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row align-="between">
+                        <span is-="badge" variant-="red">AI for Developer Productivity</span>
+                        <span is-="badge" variant-="background0">Issued Mar 2025</span>
+                    </row>
+                    <column space-="px:1 pb:1">
+                        <p>Gauntlet AI</p>
+                    </column>
+                </column>
+            </column>
+        </section>
+
+        <section id="skills" class="section">
+            <column gap-="1" space-="px:2 py:1">
+                <h2>Technical Skills</h2>
+                
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">Languages</span>
+                    </row>
+                    <row gap-="1" space-="px:1 pb:1" class="skill-tags">
+                        <span is-="badge" variant-="red" cap-="round">Swift</span>
+                        <span is-="badge" variant-="yellow" cap-="round">JavaScript</span>
+                        <span is-="badge" variant-="blue" cap-="round">TypeScript</span>
+                        <span is-="badge" variant-="green" cap-="round">Python</span>
+                        <span is-="badge" variant-="red" cap-="round">Java</span>
+                    </row>
+                </column>
+
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">Frontend & Mobile</span>
+                    </row>
+                    <row gap-="1" space-="px:1 pb:1" class="skill-tags">
+                        <span is-="badge" variant-="blue" cap-="triangle">React.js</span>
+                        <span is-="badge" variant-="background1" cap-="triangle">Next.js</span>
+                        <span is-="badge" variant-="blue" cap-="triangle">React Native</span>
+                        <span is-="badge" variant-="background1" cap-="triangle">iOS</span>
+                        <span is-="badge" variant-="red" cap-="triangle">SwiftUI</span>
+                        <span is-="badge" variant-="background1" cap-="triangle">UIKit</span>
+                        <span is-="badge" variant-="blue" cap-="triangle">Xcode</span>
+                    </row>
+                </column>
+
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">Backend & APIs</span>
+                    </row>
+                    <row gap-="1" space-="px:1 pb:1" class="skill-tags">
+                        <span is-="badge" variant-="green" cap-="triangle">Express.js</span>
+                        <span is-="badge" variant-="blue" cap-="triangle">REST APIs</span>
+                        <span is-="badge" variant-="blue" cap-="triangle">PostgreSQL</span>
+                        <span is-="badge" variant-="yellow" cap-="triangle">AWS RDS</span>
+                    </row>
+                </column>
+
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">Cloud & DevOps</span>
+                    </row>
+                    <row gap-="1" space-="px:1 pb:1" class="skill-tags">
+                        <span is-="badge" variant-="yellow" cap-="triangle">Amazon EC2</span>
+                        <span is-="badge" variant-="yellow" cap-="triangle">AWS Lambda</span>
+                        <span is-="badge" variant-="yellow" cap-="triangle">AWS Amplify</span>
+                    </row>
+                </column>
+
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">Security & Authentication</span>
+                    </row>
+                    <row gap-="1" space-="px:1 pb:1" class="skill-tags">
+                        <span is-="badge" variant-="red" cap-="triangle">Auth0</span>
+                        <span is-="badge" variant-="blue" cap-="triangle">OAuth 2.0</span>
+                        <span is-="badge" variant-="background1" cap-="triangle">JWT</span>
+                        <span is-="badge" variant-="yellow" cap-="triangle">AWS Cognito</span>
+                    </row>
+                </column>
+
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">AI</span>
+                    </row>
+                    <row gap-="1" space-="px:1 pb:1" class="skill-tags">
+                        <span is-="badge" variant-="green" cap-="triangle">MCP</span>
+                        <span is-="badge" variant-="background1" cap-="triangle">OpenAI API</span>
+                        <span is-="badge" variant-="red" cap-="triangle">Anthropic API</span>
+                        <span is-="badge" variant-="background1" cap-="triangle">Cursor</span>
+                        <span is-="badge" variant-="blue" cap-="triangle">Windsurf</span>
+                        <span is-="badge" variant-="yellow" cap-="triangle">AWS Bedrock</span>
+                    </row>
+                </column>
+            </column>
+        </section>
+
+        <section id="contact" class="section">
+            <column gap-="1" space-="px:2 py:1">
+                <h2>Contact</h2>
+                
+                <column box-="square" shear-="top" gap-="1" variant-="background0">
+                    <row>
+                        <span is-="badge" variant-="background0">Get in Touch</span>
+                    </row>
+                    <column space-="px:1 pb:1" gap-="1">
+                        <row gap-="1">
+                            <span is-="badge" variant-="green">Email</span>
+                            <a href="mailto:contact@ashermorse.dev">contact@ashermorse.dev</a>
+                        </row>
+                        <row gap-="1">
+                            <span is-="badge" variant-="blue">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/ashermorse" target="_blank">linkedin.com/in/ashermorse</a>
+                        </row>
+                        <row gap-="1">
+                            <span is-="badge" variant-="yellow">GitHub</span>
+                            <a href="https://github.com/ashermorse" target="_blank">github.com/ashermorse</a>
+                        </row>
+                    </column>
+                </column>
+            </column>
+        </section>
+    </main>
+
+    <footer box-="square" shear-="top">
+        <row align-="between" space-="px:1">
+            <span is-="badge" variant-="green">asher@morse:~$</span>
+            <row gap-="1">
+                <span is-="badge" variant-="background1">Seattle, WA</span>
+                <span is-="badge" variant-="blue" id="time">00:00:00</span>
+            </row>
+        </row>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
